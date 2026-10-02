@@ -13,7 +13,7 @@ load_dotenv()
 
 model = init_chat_model(
     model = "deepseek-v4-flash",
-    api_key = os.getenv("LLM_API_KEY"),
+    api_key = os.getenv("DEEPSEEK_API_KEY"),
     base_url = os.getenv("LLM_BASE_URL"),
 )
 summary_prompt = ChatPromptTemplate.from_template(
