@@ -162,6 +162,6 @@ if __name__ == "__main__":
         # 遍历每一步的节点和状态（单节点执行，故仅一个键值对）
         for node, state in step.items():
             print(f"===== 节点 {node} 执行后 - 全局状态 =====")
-            print(f"✅ 已完成任务：{state.done_tasks}")
-            print(f"📋 剩余待办任务：{state.todo_tasks}")
-            print(f"📌 最新团队状态：{state.status_updates[-1]}\n")
+            print(f"✅ 已完成任务：{state['done_tasks']}")
+            print(f"📋 剩余待办任务：{state['todo_tasks']}")
+            print(f"📌 最新团队状态：{state['status_updates'][-1]}\n")
