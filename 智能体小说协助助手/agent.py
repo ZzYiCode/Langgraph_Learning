@@ -8,13 +8,13 @@ from load_prompt import construction_prompt,write_prompt
 from config import LLM_BASE_URL, LLM_API_KEY
 
 class TaskState(BaseModel):
-    content : str = ""
+    content : str = Field("",description="小说主要内容")
     title : str = Field(default="",description="小说标题")
     character : str = Field(default="",description="小说主人公")
     description : str = Field(default="",description="大致情节")
     construction :str = Field("",description="故事框架")
     review_text : str = Field("",description="指导意见")
-    progress : Literal[START,"construction","write",END] = "construction"
+    progress : Literal[START,"construction","write",END] = START
     is_finished : bool = False
 
 
